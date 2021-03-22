@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const request = require('request');
 const app = express()
 var PORT = process.env.PORT || 3000;
+
 const apiKey = 'a31a00da522540e5b5ec034ba594c631'; // News API Key
 
 app.use(express.static('public'));
@@ -25,7 +26,7 @@ app.get('/', function (req, res) {
 app.post('/', function (req, res) {
   let search = req.body.search;
 
-  let url = `https://newsapi.org/v2/top-headlines?&q=${search}&ortBy=publishedAt&apiKey=${apiKey}`
+  let url = `https://newsapi.org/v2/top-headlines?q=${search}&country=us&apiKey=${apiKey}`
 
   request(url, function (err, response, body) {
     if(err){
