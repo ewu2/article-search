@@ -3,7 +3,6 @@ const bodyParser = require('body-parser');
 const request = require('request');
 const app = express()
 var PORT = process.env.PORT || 3000;
-
 const apiKey = 'a31a00da522540e5b5ec034ba594c631'; // News API Key
 
 app.use(express.static('public'));
