@@ -25,7 +25,7 @@ app.get('/', function (req, res) {
 app.post('/', function (req, res) {
   let search = req.body.search;
 
-  let url = `https://newsapi.org/v2/top-headlines?q=${search}&sortBy=publishedAt&apiKey=${apiKey}`
+  let url = `https://newsapi.org/v2/top-headlines?country=us&q=${search}&sortBy=publishedAt&apiKey=${apiKey}`
 
   request(url, function (err, response, body) {
     if(err){
