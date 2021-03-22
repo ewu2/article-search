@@ -11,7 +11,7 @@ In order to familarize myself with Node.js and Express, I'm working on my own mo
 **To run program locally:**
 ```
 node server.js
-Application running @ http://localhost:3000
+// Application running @ http://localhost:3000
 ```
 
 > **3-22-21:** _current version's request parameters retrieves information on the top-headline article_
