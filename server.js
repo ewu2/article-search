@@ -4,7 +4,8 @@ const request = require('request');
 const app = express()
 var PORT = process.env.PORT || 3000;
 
-const apiKey = 'a31a00da522540e5b5ec034ba594c631'; // News API Key
+// News API Key (can only make 100 requests per day for free)
+const apiKey = 'a31a00da522540e5b5ec034ba594c631';
 
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -26,7 +27,7 @@ app.get('/', function (req, res) {
 app.post('/', function (req, res) {
   let search = req.body.search;
 
-  let url = `https://newsapi.org/v2/top-headlines?q=${search}&country=us&apiKey=${apiKey}`
+  let url = `https://newsapi.org/v2/top-headlines?&q=${search}&apiKey=${apiKey}`
 
   request(url, function (err, response, body) {
     if(err){
