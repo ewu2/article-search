@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Top Article Search</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link href='https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <div class="container">
+      <fieldset>
+        <form action="/" method="post">
+          <input name="search" type="text" class="ghost-input" placeholder="Enter search here..." required>
+          <input type="submit" class="ghost-button" value="Load Top Headline Article">
+        </form>
+
+        <div class="article">
+          <% if(article !== null){ %>
+            <h1><i><%= article %></i></h1>
+          <% } %>
+
+          <% if(content !==null){ %>
+            <h3><%= content %></h3>
+          <% } %>
+  
+          <% if(author !== null){ %>
+            <p><b>Author:</b> <%= author %></p>
+          <% } %>
+  
+          <% if(description !== null){ %>
+            <p><b>Description:</b> <%= description %></p>
+          <% } %>
+  
+          <% if(date !== null){ %>
+            <p><b>Published:</b> <%= date %></p>
+          <% } %>
+  
+          <% if(link !== null){ %>
+            <p><b>URL:</b> <%= link %></p>
+          <% } %>
+  
+          <% if(error !== null){ %>
+            <p><%= error %></p>
+          <% } %>
+        </div>
+      </fieldset>
+    </div>
+  </body>
+</html>
