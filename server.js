@@ -4,7 +4,7 @@ const request = require('request');
 const app = express()
 var PORT = process.env.PORT || 3000;
 
-// News API Key (can only make 100 requests per day for free)
+// News API Key (100 requests per day for free)
 const apiKey = 'a31a00da522540e5b5ec034ba594c631';
 
 app.use(express.static('public'));
