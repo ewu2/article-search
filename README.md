@@ -12,4 +12,4 @@ node server.js
 // Application running @ http://localhost:3000
 ```
 
-> **3-22-21:** _current version's request parameters retrieves information on the top-headline article in the US_
+> **3-22-21:** _current version's request parameters retrieves information on the top-headline article based on search_
